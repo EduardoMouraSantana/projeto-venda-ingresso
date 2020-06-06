@@ -1,0 +1,40 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened
+        fixedInViewport ="true" fixedTopGap="70">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/home">
+                <i class="material-icons">
+                    home
+                </i>
+                Início
+            </a>
+            <a mat-list-item routerLink="/cliente">
+                <i class="material-icons">
+                    account_circle
+                </i>
+                Cliente
+            </a>
+            <a mat-list-item routerLink="/casa">
+                <i class="material-icons">
+                    location_city
+                </i>
+                Casa
+            </a>
+            <a mat-list-item routerLink="/evento">
+                <i class="material-icons">
+                    insert_invitation
+                </i>
+                Evento
+            </a>
+            <a mat-list-item routerLink="/ingresso">
+                <i class="material-icons">
+                    add_shopping_cart
+                </i>
+                Ingressos
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+<mat-sidenav-content class="content fundo">
+    <router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,15 @@
+table{
+    width: 90%;
+    margin-top: 20px;
+}
+.edit{
+    margin-right: 10px;
+}
+
+i.edit{
+    color: yellow;
+}
+
+i.delete{
+    color: red;
+}

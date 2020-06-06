@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-title> Comprar Ingresso</mat-card-title>
+    <form>
+        <mat-form-field>
+            <mat-select [(ngModel)]="ingresso.nome_evento" placeholder="Selecione o Evento" name="ingresso.nome_evento" >
+                <mat-option [value]="evento.nome" aria-required="aria-required">
+                {{evento.nome}}
+                </mat-option>
+            </mat-select> 
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-select [(ngModel)]="ingresso.nome_cliente" placeholder="Nome do Cliente" name="ingresso.nome_cliente">
+                <mat-option
+                *ngFor="let cliente of clientes" [value]="cliente.nome" aria-required="aria-required">
+                {{cliente.nome}}
+                </mat-option>
+            </mat-select> 
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Área" [(ngModel)]="ingresso.zona" name="zona"> 
+        </mat-form-field>
+        
+    </form>
+    <button class="button-pr" mat-raised-button (click)="createIngresso()" color="primary">
+        Comprar
+    </button>
+    <button class="button-pr" mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

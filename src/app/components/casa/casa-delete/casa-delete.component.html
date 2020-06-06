@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title> Excluir Casa</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="casa.nome" name="nome" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereco" [value]="casa.endereco" name="endereco" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Capacidade" [value]="casa.capacidade" name="capacidade" disabled> 
+        </mat-form-field>
+    </form>
+    <button class="button-pr" mat-raised-button (click)="deleteCasa()" color="warn">
+        Deletar
+    </button>
+    <button class="button-pr" mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

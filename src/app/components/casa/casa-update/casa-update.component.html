@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title> Alterar Casa</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="casa.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)]="casa.endereco" name="endereco">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Capacidade" [(ngModel)]="casa.capacidade" name="capacidade"> 
+        </mat-form-field>
+    </form>
+    <button class="button-pr" mat-raised-button (click)="updateCasa()" color="primary">
+        Atualizar
+    </button>
+    <button class="button-pr" mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
